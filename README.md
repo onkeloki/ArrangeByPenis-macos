@@ -26,7 +26,13 @@ someone asked nicely.
 This project is a heartfelt homage to that video. No sales guys were harmed in
 the making of this app.
 
-## Build
+## Download
+
+Grab the latest signed and notarized build from
+[Releases](https://github.com/onkeloki/ArrangeByPenis-macos/releases/latest),
+unzip it, move it to *Applications* and start it.
+
+## Build it yourself
 
 Requires Xcode Command Line Tools (`xcode-select --install`).
 

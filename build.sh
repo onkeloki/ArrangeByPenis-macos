@@ -14,12 +14,16 @@ cat > "$APP/Contents/Info.plist" <<PLIST
   <key>CFBundleIdentifier</key><string>de.reingenerdet.arrangebypenis</string>
   <key>CFBundleExecutable</key><string>ArrangeByPenis</string>
   <key>CFBundlePackageType</key><string>APPL</string>
-  <key>CFBundleShortVersionString</key><string>1.0</string>
+  <key>CFBundleShortVersionString</key><string>${VERSION:-1.0}</string>
   <key>CFBundleVersion</key><string>1</string>
   <key>LSMinimumSystemVersion</key><string>13.0</string>
   <key>NSHighResolutionCapable</key><true/>
   <key>NSAppleEventsUsageDescription</key><string>Die App verschiebt die Icons auf deinem Schreibtisch über den Finder.</string>
 </dict></plist>
 PLIST
-codesign --force --deep -s - "$APP"
+if [[ -n "$SIGN_ID" ]]; then
+  codesign --force --options runtime --timestamp --entitlements entitlements.plist -s "$SIGN_ID" "$APP"
+else
+  codesign --force -s - "$APP"   # ad-hoc, nur für lokal
+fi
 echo "Gebaut: $PWD/$APP"
