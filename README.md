@@ -26,9 +26,15 @@ someone asked nicely.
 This project is a heartfelt homage to that video. No sales guys were harmed in
 the making of this app.
 
-## Download
+## Install
 
-Grab the latest signed and notarized build from
+With [Homebrew](https://brew.sh):
+
+```sh
+brew install --cask onkeloki/tap/arrange-by-penis
+```
+
+Or download it manually: grab the latest signed and notarized build from
 [Releases](https://github.com/onkeloki/ArrangeByPenis-macos/releases/latest),
 unzip it, move it to *Applications* and start it.
 
