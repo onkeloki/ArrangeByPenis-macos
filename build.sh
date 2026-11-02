@@ -11,7 +11,7 @@ cat > "$APP/Contents/Info.plist" <<PLIST
 <plist version="1.0"><dict>
   <key>CFBundleName</key><string>Arrange by Penis</string>
   <key>CFBundleDisplayName</key><string>Arrange by Penis</string>
-  <key>CFBundleIdentifier</key><string>local.oki.arrangebypenis</string>
+  <key>CFBundleIdentifier</key><string>de.reingenerdet.arrangebypenis</string>
   <key>CFBundleExecutable</key><string>ArrangeByPenis</string>
   <key>CFBundlePackageType</key><string>APPL</string>
   <key>CFBundleShortVersionString</key><string>1.0</string>
